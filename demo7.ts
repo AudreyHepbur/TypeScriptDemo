@@ -32,7 +32,7 @@ getResume(girl)
 
 
 // 接口和类型别名的区别
-// 接口
+// 类型别名可以直接给类型，比如string，而接口必须代表对象。
 interface Girl {
   name: string
   age: number
