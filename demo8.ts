@@ -8,8 +8,9 @@ interface Girl {
   waistline?: number
   [propname: string]: any // 属性的名字是字符串类型，属性的值可以是任何类型。
 }
+// 属性的名字只能是 string 和 number
 
-const getResume3 = (girl: Girl) => {
+const getResume = (girl: Girl) => {
   console.log(girl.name + "年龄是：" + girl.age);
   console.log(girl.name + "身高是：" + girl.bust);
   girl.waistline && console.log(girl.name + "体重是：" + girl.waistline);
@@ -22,9 +23,9 @@ const girl3 = {
   waistline: 22,
   sex: "女"
 }
-getResume3(girl3)
+getResume(girl3)
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // 接口里的方法
 interface Boy {
@@ -36,6 +37,14 @@ interface Boy {
   say() : string
 }
 
+const getResume1 = (girl: Girl) => {
+  console.log(girl.name + "年龄是：" + girl.age);
+  console.log(girl.name + "身高是：" + girl.bust);
+  girl.waistline && console.log(girl.name + "体重是：" + girl.waistline);
+  girl.sex && console.log(girl.name + "性别是：" + girl.sex);
+  console.log('：'+girl.say());
+  
+};
 const boy = {
   name: '小刚',
   age: 35,
@@ -46,22 +55,39 @@ const boy = {
     return '路南'
   }
 }
-console.log(boy);
+getResume1(boy)
 
 
-// 接口和类的约束
-class haar implements Boy {
-  name = '哈尔'
-  age = 200
-  bust = 11
-  sax = '男'
-  say() {
-    return '哈尔的移动城堡'
-  }
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+interface Father {
+  name: string
+  age: number
+  sex: string
+  waistline1?: string
+  [propname: string]: any
+  say() : string
 }
 
+// 接口和类的约束
+
+// 错误写法
+// class XiaoJieJie implements Girl {}
+
+// 完整写法
+// class XiaoJieJie implements Boy {
+//   name = '哈尔'
+//   age = 200
+//   bust = 11
+//   sax = '男'
+//   say() {
+//     return '哈尔的移动城堡'
+//   }
+// }
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 接口间的继承
-interface Teacher extends Boy {
+interface Teacher extends Father {
   teach(): string
 }
 
@@ -72,7 +98,7 @@ const boy1 = {
   waistline: 21,
   sex: "女",
   say() {
-    return "欢迎光临 ，红浪漫洗浴！！";
+    return "欢迎光临 ！！";
   },
   teach() {
     return "我是一个老师";
@@ -80,8 +106,8 @@ const boy1 = {
 }
 const getResume4 = ( boy: Teacher ) => {
   console.log(boy.name + "年龄是：" + boy.age);
-  console.log(boy.name + "胸围是：" + boy.bust);
-  boy.waistline && console.log(boy.name + "腰围是：" + boy.waistline);
+  console.log(boy.name + "身高是：" + boy.bust);
+  boy.waistline && console.log(boy.name + "体重是：" + boy.waistline);
   boy.sex && console.log(boy.name + "性别是：" + boy.sex);
 }
 getResume4(boy1)
