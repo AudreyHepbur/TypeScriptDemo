@@ -1,4 +1,4 @@
-// 函数无tosay()返回值时定义方法
+// 函数无返回值时定义方法
 function tosay(): void {
   console.log('定义vido');
   // return 1 + 1 //  注意:加入任何返回值，程序都会报错

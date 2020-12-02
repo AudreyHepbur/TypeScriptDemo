@@ -7,7 +7,7 @@ const xiaojiejie = ["dajiao", "teacher", 28];
 // 注解
 const xiaojiejie1: (string | number)[] = ["dajiao", 28, "teacher"];
 // 元组注解
-const xiaojeijie2: [string, number, string] = ["dajiao", 28, "teacher"];
+const xiaojeijie2: Person = ["dajiao", "teacher", 28];
 // 严谨写法 === 元组注解
 const xiaojiejies: Person[] = [
   ["dajiao", "teacher", 28],

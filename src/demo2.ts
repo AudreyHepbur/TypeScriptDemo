@@ -1,6 +1,47 @@
+
+/**
+ * ~~~~~~~~~~~~~~~~~~~~练习~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+interface Type {
+  main: string
+  titile: string
+  age: string
+  sayTell(): string
+}
+
+class Exparent {
+  main = '元旦'
+  titile = '国庆'
+  age = '中秋'
+  sayTell() {
+    return '赛龙舟'
+  }
+}
+const exparent: Type = new Exparent()
+console.log(exparent.main);
+console.log(exparent.sayTell());
+
+// 类的继承
+class Courage extends Exparent {
+  sayHell() {
+    return '孔明庙前有老柏'
+  }
+}
+const courage = new Courage()
+console.log(courage.sayTell());
+
+/**
+ * 
+ * ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+ * ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓正文↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+ * 
+ */
+
+
+
 let count: number = 1;
 
-// 自定义静态类型
+// 接口自定义静态类型
 interface Xiaojiejie {
   uname: string,
   age: number
@@ -14,6 +55,7 @@ const xiaohong: Xiaojiejie = {
 // null,undefinde,symbol,boolean，void这些都是最常用的基础数据类型
 const count1: number = 857
 const myName: string = 'wangwan'
+
 
 
 
@@ -31,14 +73,14 @@ console.log(objType.name)
 
 // 变量xiaoJieJies必须是一个数组，数组里的内容必须是字符串
 // const xiaoJieJies: String[] = ["谢大脚", "刘英", 123]; //报错
-const arrType: String[] = ['笑道',"刘能",'赵本山']
+const arrType: String[] = ['笑道', "刘能", '赵本山']
 
 
 
 // 面向对象编程
-class Person {}
-// liuneng必须是一个Person类对应的对象才可以
-const liuneng: Person = new Person()
+class Teacher { }
+// liuneng必须是一个Teacher类对应的对象才可以
+const liuneng: Teacher = new Teacher()
 
 const liuquan: () => string = () => {
   return '刘全'

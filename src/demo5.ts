@@ -22,12 +22,12 @@ getNumber({ one: 1 })
 
 
 // TypeScript中的数组类型的定义
-const numberArr = [1, 2, 3, 4, 5]
+const numberArr1 = [1, 2, 3, 4, 5]
 
 // 字符串类型数组
-const numberArr: string[] = ['1', '3', '4', '5']
+const numberArr2: string[] = ['1', '3', '4', '5']
 // 数字类型数组
-const numberArr: number[] = [1, 2, 3, 4, 5, 66, 6]
+const numberArr3: number[] = [1, 2, 3, 4, 5, 66, 6]
 // 任意类型数组
 const undefinedArr: undefined[] = [undefined, undefined]
 

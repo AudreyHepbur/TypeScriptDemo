@@ -1,15 +1,14 @@
 // // TypeScript 类的 Getter,Setter和static 使用
-// class Person {
-//   constructor(private _age: number) {}    // _age是私有的
-//   get age() {   // getter属性的关键字是get
-//     return this._age -10
-//   }
-//   set age(age:number) {
-//     this._age = age + 3
-//   }
-// }
+class Person {
+  constructor(private _age: number) {}    // _age是私有的
+  get age() {   // getter属性的关键字是get
+    return this._age -10
+  }
+  set age(age:number) {
+    this._age = age + 3
+  }
+}
 // // 类的外部用没办法改变, 可以用setter属性进行改变
-
 // const person = new Person(28)
 // person.age = 35
 // console.log(person.age);
