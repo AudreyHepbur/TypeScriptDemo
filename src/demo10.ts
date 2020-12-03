@@ -1,6 +1,9 @@
-// TypeScript 中类的访问类型
-// 三个关键词private、protected和public
-
+/**
+ * 
+ * TypeScript 中类的访问类型
+ * 三个关键词private、protected和public
+ * 
+ */
 // class Parson {
 //   public name: string
 // }
@@ -10,25 +13,32 @@
 // console.log(person.name);
 
 
-// // public 属性讲解
-// //  公共的,允许在类的内部和外部被调用.
-// ```````````````内部 Start`````````````````````
+/**
+ * 
+ * public 属性讲解
+ * 公共的,允许在类的内部和外部被调用.
+ * 如果不在类里对name的访问属性进行定义，那么它就会默认是public访问属性
+ * 
+ */
 // class Student {
 //   public name:string  
 //   public sayHello() {
 //     console.log(this.name + ' say Hello');
 //   }
 // }
-// ```````````````内部 End`````````````````````
-// ```````````````外部 Start`````````````````````
+// ```````````````以下属于类的外部`````````````````````
 // const student = new Student()
 // student.name = 'huoihu'
 // student.sayHello()
-// ```````````````外部 End`````````````````````
 
 
-// private 属性讲解
-// private 私有的,只允许再类的内部被调用，外部不允许调用
+
+/**
+ * 
+ * private 属性讲解
+ * private 私有的,只允许再类的内部被调用，外部不允许调用
+ * 
+ */
 // class Teacher {
 //   private content: string
 //   public sayTell() {

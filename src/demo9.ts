@@ -51,7 +51,12 @@
 // console.log(goddess.sayLove());
 
 
-// super关键字代码使用父类中的方法
+/**
+ * 
+ * super关键字代码使用父类中的方法
+ * 子类调用父类中的方法
+ * 
+ */
 class Student {
   content = '父类'
   sayHello() {

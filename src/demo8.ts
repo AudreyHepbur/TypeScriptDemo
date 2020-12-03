@@ -68,8 +68,13 @@ interface Father {
   say() : string
 }
 
-// 接口和类的约束
 
+/**
+ * 
+ * 接口和类的约束
+ * 一个类只能继承自另一个类，有时候不同类之间可以有一些共有的特性，这时候就可以把特性提取成接口（interfaces），用 implements 关键字来实现。这个特性大大提高了面向对象的灵活性
+ * 
+ */
 // 错误写法
 // class XiaoJieJie implements Girl {}
 

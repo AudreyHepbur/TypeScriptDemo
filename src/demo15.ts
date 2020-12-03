@@ -26,8 +26,8 @@
  * 高级写法:
  */
 enum Status {
-  MASSAGE = 3,
-  SPA,
+  MASSAGE,
+  SPA = 3,
   DABAOJIAN
 }
 function getParams(status: any) {
