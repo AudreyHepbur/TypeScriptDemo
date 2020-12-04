@@ -5,13 +5,14 @@ class Person {
     return this._age -10
   }
   set age(age:number) {
-    this._age = age + 3
+    this._age = age + 4
   }
 }
-// // 类的外部用没办法改变, 可以用setter属性进行改变
-// const person = new Person(28)
-// person.age = 35
-// console.log(person.age);
+// 类的外部用没办法改变, 可以用setter属性进行改变
+const person = new Person(28)
+console.log(person.age);
+person.age = 35
+console.log(person.age);
 
 
 // 只读属性

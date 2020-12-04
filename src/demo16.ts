@@ -14,9 +14,15 @@ console.log(result);
 function judge<JSpang>(first: JSpang, second: JSpang) {
   return `${first}${second}`
 }
-
 const params = judge<number>(2, 5)
 console.log(params);
+
+// 例3
+const estimate = <T>(first: T, second: T) => {
+  return `${first}${second}`
+}
+console.log(estimate<number>(2,5));
+
 
 
 /**
@@ -30,12 +36,19 @@ function myArray<T>(params: T[]) {
 }
 const data = myArray<string>(['123', '456'])
 console.log(data);
+
 // 写法二
 function myArray2<T>(params: Array<T>) {
   return params
 }
 const data2 = myArray2<string>(['789', '321'])
 console.log(data2);
+
+// 箭头函数
+const myArray3 = <T>(params: T[]) =>{
+    return params
+}
+console.log(myArray3<string>(['1', '3', '5']));
 
 
 /**
@@ -47,6 +60,12 @@ function getParams<T, P>(first: T, second: P) {
   return `${first}${second}`
 }
 getParams<number, string>(1, '2')
+
+// 箭头函数
+const _getParams = <T, P>(first: T, second: P) => {
+  return `${first}${second}`
+}
+console.log(_getParams<number, string>(1, '2'));
 
 
 

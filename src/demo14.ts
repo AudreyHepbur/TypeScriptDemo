@@ -26,7 +26,7 @@ function judgeOccupation(animal: Waiter | Teacher) {}
  * 
  */
 // function judgeWho(animal: Waiter | Teacher) {
-//   animal.say();
+//   animal.say();  // 报错
 // }
 
 
@@ -35,22 +35,22 @@ function judgeOccupation(animal: Waiter | Teacher) {}
  * 类型保护——类型断言
  * 
  */
-// interface Student {
-//   isShow: boolean
-//   hello:() => {}
-// }
-// interface Teacher {
-//   isShow: boolean
-//   teach:() => {}
-// }
+interface Student {
+  isShow: boolean
+  hello:() => {}
+}
+interface Teacher {
+  isShow: boolean
+  teach:() => {}
+}
 
-// function HandelGetData(data: Student | Teacher) {
-//   if(data.isShow) {
-//     (data as Student).hello()
-//   } else {
-//     (data as Teacher).teach()
-//   }
-// }
+function HandelGetData(data: Student | Teacher) {
+  if(data.isShow) {
+    (data as Student).hello()
+  } else {
+    (data as Teacher).teach()
+  }
+}
 
 
 
@@ -73,18 +73,18 @@ function judgeWhoTwo(animal: Waiter | Teacher) {
  * 类型保护——typeof语法
  * 
  */
-// 不做任何的类型保护，只是相加，这时候就会报错
-// function add(first: string | number, second: string | number) {
-//   return first + second
-// }
+// // 不做任何的类型保护，只是相加，这时候就会报错
+// // function add(first: string | number, second: string | number) {
+// //   return first + second
+// // }
 
-// typeof类型保护处理
-function add(first: string | number, second: string | number) {
-  if (typeof first === 'string' || typeof second === 'string') {
-    return `${first}${second}`
-  }
-  return first + second //TS自动判断
-}
+// // typeof类型保护处理
+// function add(first: string | number, second: string | number) {
+//   if (typeof first === 'string' || typeof second === 'string') {
+//     return first + second   // 报错 
+//   }
+//   return first + second //TS自动判断
+// }
 
 
 

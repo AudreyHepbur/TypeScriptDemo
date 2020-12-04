@@ -1,6 +1,6 @@
 // // 类的构造函数
 class Teacher {
-  public _title: string
+  public  _title: string
   constructor(content: string) {
     this._title = content
   }

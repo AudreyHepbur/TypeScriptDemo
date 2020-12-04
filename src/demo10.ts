@@ -60,7 +60,7 @@ class Student {
     console.log(this.name + 'say Hello')  //此处不报错
   }
 }
-class Teacher extends Student {
+class Tutor extends Student {
   public sayBye() {
     return this.name
   }
