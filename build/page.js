@@ -1,0 +1,6 @@
+"use strict";
+var teacher = 'jsPang';
+console.log(teacher);
+$(function () {
+    console.log('Jquery');
+});

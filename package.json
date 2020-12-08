@@ -1,0 +1,15 @@
+{
+  "name": "TypeScriptDemo",
+  "version": "1.0.0",
+  "description": "[^技术胖]: [走起](https://www.jspang.com/detailed?id=63)",
+  "main": "index.js",
+  "scripts": {
+    "test": "parcel ./src/index.html --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  }
+}

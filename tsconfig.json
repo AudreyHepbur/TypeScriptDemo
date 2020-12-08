@@ -1,5 +1,5 @@
 {
-  "include":["src/demo.ts"],  //  编译包含文件
+  "include":["src"],  //  编译包含文件
   // "files":["demo.ts"],  //  同上
   // "exclude":["demo2.ts"],  //  编译不包含文件
   "compilerOptions": {
@@ -15,10 +15,10 @@
     // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
-    "sourceMap": true,   // 信息文件，里面储存着位置信息,转换后的代码的每一个位置，所对应的转换前的位置.有了它，出错的时候，除错工具将直接显示原始代码，而不是转换后的代码。这无疑给开发者带来了很大方便。
-    // "outFile": "./",                       /* Concatenate and emit output to single file. */
-    "outDir": "./build",                        /* Redirect output structure to the directory. */
-    // "rootDir": "./tsconfig",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "sourceMap": false,   // 信息文件，里面储存着位置信息,转换后的代码的每一个位置，所对应的转换前的位置.有了它，出错的时候，除错工具将直接显示原始代码，而不是转换后的代码。这无疑给开发者带来了很大方便。
+    // "outFile": "./build/page.js",            /* Concatenate and emit output to single file. */
+    "outDir": "./build",                      /* Redirect output structure to the directory. */
+    "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
     // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
     "removeComments": true,   //  编译时是否显示注释（注解），值设置为true也就是编译出来的js文件不显示注释内容

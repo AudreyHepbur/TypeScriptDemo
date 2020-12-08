@@ -1,0 +1,17 @@
+"use strict";
+
+var Home;
+
+(function (Home) {
+  var Page = function () {
+    function Page() {
+      new Components.Subcomponents.Header();
+      new Components.Subcomponents.Content();
+      new Components.Subcomponents.Footer();
+    }
+
+    return Page;
+  }();
+
+  Home.Page = Page;
+})(Home || (Home = {}));
